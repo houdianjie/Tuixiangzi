@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_linear"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/half_transparent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <com.youshi.tuixiangzi.util.MyTextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/text_nomal_color"
+                    android:text="用时:"/>
+                <com.youshi.tuixiangzi.util.MyTextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/text_nomal_color"
+                    android:text="步数:"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <com.youshi.tuixiangzi.util.MyChronometer
+                    android:id="@+id/gameTimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:format="00:00:00"
+                    android:gravity="center|start"
+                    android:textColor="@color/text_nomal_color"
+                    android:textSize="20sp" />
+
+                <com.youshi.tuixiangzi.util.MyTextView
+                    android:id="@+id/gameSteps"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/text_nomal_color"
+                    android:gravity="center|start"
+                    android:text="25"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.youshi.tuixiangzi.util.MyTextView
+            android:id="@+id/game_level_tv"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="第1关"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/text_nomal_color"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_gameview_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:background="@color/half_transparent"
+            >
+            <com.youshi.tuixiangzi.util.CustomScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:layout_margin="10dp"
+                >
+<HorizontalScrollView
+    android:id="@+id/main_gameview_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+</HorizontalScrollView>
+            </com.youshi.tuixiangzi.util.CustomScrollView>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:background="@color/half_transparent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/main_pre_level_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:onClick="main_pre_level_btn_click"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pre_level_bg"
+                    />
+
+                <ImageButton
+                    android:id="@+id/main_reset_level_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:onClick="main_reset_level_btn_click"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/reset_level_bg" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"/>
+
+                <ImageButton
+                    android:id="@+id/main_btn_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/transparent"
+                    android:onClick="main_btn_up_click"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/up_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/main_next_level_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:onClick="main_next_level_btn_click"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/next_level_bg" />
+
+                <ImageButton
+                    android:id="@+id/main_return_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:onClick="main_return_btn_click"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/return_main_page_bg" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/main_btn_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:onClick="main_btn_left_click"
+                android:scaleType="centerInside"
+                android:src="@drawable/left_bg"
+                />
+            <ImageButton
+                android:id="@+id/main_btn_down"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:onClick="main_btn_down_click"
+                android:scaleType="centerInside"
+                android:src="@drawable/down_bg" />
+            <ImageButton
+                android:id="@+id/main_btn_right"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="main_btn_right_click"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_bg" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
